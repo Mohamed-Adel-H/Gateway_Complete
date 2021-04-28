@@ -1,0 +1,95 @@
+/* Structure */
+.example-container {
+  position: relative;
+  min-height: 200px;
+  /*height: 80%;*/
+}
+
+.example-table-container {
+  position: relative;
+  height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+/**/
+.action-buttons {
+  width: 25%;
+  text-align: center;
+}
+
+.action-header {
+  text-align: center;
+}
+
+.fab-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+/**/
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: #212121;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #1c1b1b;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+  background: black;
+}
+
+.devices {
+  display: flex;
+  flex-direction: column;
+}
+
+.device {
+  display: flex;
+  width: 100%;
+  line-height: 45px;
+
+}
+
+.device > div {
+  width: 25%;
+  text-align: center;
+}
+
+.device-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: aquamarine;
+  display: flex;
+  width: 100%;
+  line-height: 40px;
+}
+
+.device-header > div {
+  width: 25%;
+  text-align: center;
+}
+
+.devices-nav {
+  position: fixed;
+  right: 25px;
+}
+
+.paginator {
+  margin-bottom: 50px;
+}

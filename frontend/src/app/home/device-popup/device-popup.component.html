@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>{{popupTitle}}</h1>
+<div mat-dialog-content>
+  <mat-form-field class="form-field">
+    <mat-label>Device UID</mat-label>
+    <input matInput [(ngModel)]="data.device.uid">
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <mat-label>Device Vendor</mat-label>
+    <input matInput [(ngModel)]="data.device.vendor">
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <mat-label>Device Status</mat-label>
+    <mat-select [(ngModel)]="data.device.status" name="status">
+      <mat-option *ngFor="let status of statuses" [value]="status.value">
+        {{status.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="onNoClick()" mat-button>Cancel</button>
+  <button [mat-dialog-close]="data" cdkFocusInitial mat-button>Ok</button>
+</div>

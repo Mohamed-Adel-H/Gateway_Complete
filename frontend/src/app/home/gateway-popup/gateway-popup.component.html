@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>{{popupTitle}}</h1>
+<div mat-dialog-content>
+  <mat-form-field class="form-field">
+    <mat-label>Gateway Name</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field class="form-field">
+    <mat-label>Gateway Serial Number</mat-label>
+    <input matInput [(ngModel)]="data.serialNumber">
+  </mat-form-field>
+  <mat-form-field class="form-field">
+    <mat-label>Gateway IP Address</mat-label>
+    <input matInput [(ngModel)]="data.ipv4">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
